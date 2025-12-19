@@ -76,4 +76,4 @@ The project successfully met all mandatory steps with:
     ```
 
 ## 👥 Contributors
-Developed as part of the Nature-Inspired Computation course curriculum. All tasks were completed flawlessly according to the project specifications.
+Developed as part of the Nature-Inspired Computation course curriculum. All tasks were completed according to the project specifications.
