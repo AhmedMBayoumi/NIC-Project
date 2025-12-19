@@ -2,7 +2,7 @@
 
 This project represents a comprehensive integration of **Nature-Inspired Computation (NIC)**, **Deep Learning**, and **Explainable AI (XAI)**. It demonstrates the power of metaheuristic algorithms in optimizing high-dimensional NLP tasks, specifically for fine-tuning BERT on sentiment analysis.
 
-## 🚀 Project Overview
+## Project Overview
 The goal of this project was to deliver a fully optimized and explainable deep learning model. We utilized the **Sentiment140** dataset (Twitter sentiment) to showcase the scalability and effectiveness of various metaheuristic optimization strategies across different stages of the machine learning pipeline.
 
 ### Core Milestones Accomplished:
@@ -15,7 +15,7 @@ The goal of this project was to deliver a fully optimized and explainable deep l
 
 ---
 
-## 🛠️ Methodology & Phases
+## Methodology & Phases
 
 ### Phase 1: Feature Selection & Baseline
 We extracted 768-dimensional features from the BERT CLS token. To reduce dimensionality and remove noise, we implemented **Ant Colony Optimization (ACO)**, which intelligently selected the most relevant feature subset, maintaining high classification accuracy while reducing computational overhead.
@@ -39,7 +39,7 @@ To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive ex
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 ├── config/             # Centralized constants and HPO bounds
@@ -54,7 +54,7 @@ To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive ex
 
 ---
 
-## 📈 Results
+## Results
 The project successfully met all mandatory steps with:
 - **Significant Accuracy Gains**: Metaheuristic HPO consistently outperformed default BERT configurations.
 - **Dimensionality Reduction**: ACO reduced feature space while preserving sentiment signals.
@@ -62,7 +62,7 @@ The project successfully met all mandatory steps with:
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 1.  **Installation**:
     ```bash
@@ -75,5 +75,5 @@ The project successfully met all mandatory steps with:
     python main.py
     ```
 
-## 👥 Contributors
+## Contributors
 Developed as part of the Nature-Inspired Computation course curriculum. All tasks were completed according to the project specifications.
