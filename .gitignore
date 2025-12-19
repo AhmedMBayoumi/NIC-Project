@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+sa_results/
+outputs/
+*.log
+.ipynb_checkpoints/
+*.csv
+!training.1600000.processed.noemoticon.csv # keep the data file mentioned if needed or just ignore all csv
