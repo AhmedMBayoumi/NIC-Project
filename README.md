@@ -40,7 +40,7 @@ To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive ex
 ---
 
 ## 📂 Project Structure
-The project is organized into a professional modular structure for better maintainability and GitHub visibility:
+The project is organized into a professional modular structure:
 
 ```text
 ├── config/             # Centralized constants and HPO bounds
@@ -59,7 +59,7 @@ The project is organized into a professional modular structure for better mainta
 The project successfully met all mandatory steps with:
 - **Significant Accuracy Gains**: Metaheuristic HPO consistently outperformed default BERT configurations.
 - **Dimensionality Reduction**: ACO reduced feature space while preserving sentiment signals.
-- **High Interpretability**: SHAP visualizations provide clear, word-level explanations.
+- **High Interpretability**: SHAP and LIME visualizations provide clear, word-level explanations.
 
 ---
 
