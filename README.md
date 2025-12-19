@@ -37,7 +37,7 @@ Following the project's mandatory "Step 3", we implemented a hierarchical optimi
 - **Inner Loop**: The **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm** then used these optimized parameters to fine-tune the BERT model.
 
 ### Phase 4: Explainable AI (XAI)
-To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive exPlanations)**. This allows us to visualize exactly which words contribute to a "Positive" or "Negative" sentiment prediction, ensuring the model's decisions are grounded in logical linguistic patterns.
+To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive exPlanations)** and **LIME (Local Interpretable Model-agnostic Explanations)**. This allows us to visualize exactly which words contribute to a "Positive" or "Negative" sentiment prediction, ensuring the model's decisions are grounded in logical linguistic patterns.
 
 ---
 
