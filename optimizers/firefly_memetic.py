@@ -78,3 +78,45 @@ def memetic_search(train_dataset, val_dataset, start_params, bounds, n_steps=3):
             best_acc, best_p = cand_acc, cand
         history.append(best_acc)
     return best_p, best_acc, history
+
+def memetic_optimization_for_firefly(train_dataset, val_dataset, model_bounds, n_steps=3):
+    """
+    Step 3 Meta-Optimization:
+    Use Memetic Search to optimize the hyperparameters of the Firefly Algorithm.
+    The Firefly Algorithm then optimizes the BERT model.
+    """
+    firefly_param_ranges = {
+        'beta0': (0.5, 2.0),
+        'gamma': (0.1, 5.0),
+        'alpha': (0.1, 0.5)
+    }
+    
+    def get_firefly_config_accuracy(config):
+        # Run a small firefly optimization with these params
+        _, acc, _ = firefly_optimize(
+            train_dataset, val_dataset, model_bounds, 
+            n_fireflies=3, n_iter=2, 
+            beta0=config['beta0'], gamma=config['gamma'], alpha=config['alpha']
+        )
+        return acc
+
+    # Initial firefly config
+    current_config = {
+        'beta0': 1.0,
+        'gamma': 1.0,
+        'alpha': 0.2
+    }
+    best_acc = get_firefly_config_accuracy(current_config)
+    
+    for s in range(n_steps):
+        # Small change to firefly config
+        key = random.choice(list(firefly_param_ranges.keys()))
+        low, high = firefly_param_ranges[key]
+        candidate_config = copy.deepcopy(current_config)
+        candidate_config[key] = np.clip(candidate_config[key] + random.uniform(-0.1, 0.1), low, high)
+        
+        cand_acc = get_firefly_config_accuracy(candidate_config)
+        if cand_acc > best_acc:
+            best_acc, current_config = cand_acc, candidate_config
+            
+    return current_config, best_acc

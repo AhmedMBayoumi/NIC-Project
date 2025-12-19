@@ -6,12 +6,12 @@ This project represents a comprehensive integration of **Nature-Inspired Computa
 The goal of this project was to deliver a fully optimized and explainable deep learning model. We utilized the **Sentiment140** dataset (Twitter sentiment) to showcase the scalability and effectiveness of various metaheuristic optimization strategies across different stages of the machine learning pipeline.
 
 ### Core Milestones Accomplished:
-- ✅ **Challenging Dataset**: Utilized Sentiment140 with a balanced sample of 7,000+ entries.
-- ✅ **Baseline Model**: Implemented a Transformer-based architecture using `BERT-base-uncased`.
-- ✅ **Feature Selection**: Developed an **Ant Colony Optimization (ACO)** module to select the most significant features from BERT's CLS embeddings.
-- ✅ **Multi-Optimization**: Applied **6 unique metaheuristic algorithms** for model hyperparameter optimization.
-- ✅ **Meta-Optimization**: Used a **Genetic Algorithm (GA)** to tune the parameters of the **Whale Optimization Algorithm (WOA)**.
-- ✅ **Explainable AI**: Integrated **SHAP** for model interpretability, optimized for visual clarity.
+-  **Challenging Dataset**: Utilized Sentiment140 with a balanced sample of 7,000+ entries.
+-  **Baseline Model**: Implemented a Transformer-based architecture using `BERT-base-uncased`.
+-  **Feature Selection**: Developed an **Ant Colony Optimization (ACO)** module to select the most significant features from BERT's CLS embeddings.
+-  **Multi-Optimization**: Applied **6 unique metaheuristic algorithms** for model hyperparameter optimization.
+-  **Meta-Optimization**: Used a **Genetic Algorithm (GA)** to tune the parameters of the **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm**.
+-  **Explainable AI**: Integrated **SHAP** for model interpretability, optimized for visual clarity.
 
 ---
 
@@ -26,13 +26,15 @@ We optimized critical hyperparameters (Learning Rate, Epochs, Weight Decay, Warm
 2.  **Grey Wolf Optimizer (GWO)**
 3.  **Particle Swarm Optimization (PSO)**
 4.  **Tabu Search**
-5.  **Firefly Algorithm**
-6.  **Memetic Search**
+5.  **Whale Optimization Algorithm (WOA)**
+6.  **Firefly Algorithm**
+7.  **Memetic Search**
+8.  **Genetic Algorithm (GA)**
 
 ### Phase 3: Algorithm-in-the-Loop Optimization (Meta-Optimization)
 Following the project's mandatory "Step 3", we implemented a hierarchical optimization strategy:
-- **Outer Loop**: A **Genetic Algorithm (GA)** evolved the parameters ($a$, $b$, and $p$) of the Whale Optimization Algorithm.
-- **Inner Loop**: The **Whale Optimization Algorithm (WOA)** then used these optimized parameters to fine-tune the BERT model.
+- **Outer Loop**: **Genetic Algorithm (GA)** and **Memetic algorithm** evolved the parameters ($a$, $b$, and $p$) of the Whale Optimization Algorithm and Firefly algorithm.
+- **Inner Loop**: The **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm** then used these optimized parameters to fine-tune the BERT model.
 
 ### Phase 4: Explainable AI (XAI)
 To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive exPlanations)**. This allows us to visualize exactly which words contribute to a "Positive" or "Negative" sentiment prediction, ensuring the model's decisions are grounded in logical linguistic patterns.
