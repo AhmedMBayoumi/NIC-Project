@@ -9,9 +9,9 @@ The goal of this project was to deliver a fully optimized and explainable deep l
 -  **Challenging Dataset**: Utilized Sentiment140 with a balanced sample of 7,000+ entries.
 -  **Baseline Model**: Implemented a Transformer-based architecture using `BERT-base-uncased`.
 -  **Feature Selection**: Developed an **Ant Colony Optimization (ACO)** module to select the most significant features from BERT's CLS embeddings.
--  **Multi-Optimization**: Applied **6 unique metaheuristic algorithms** for model hyperparameter optimization.
--  **Meta-Optimization**: Used a **Genetic Algorithm (GA)** to tune the parameters of the **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm**.
--  **Explainable AI**: Integrated **SHAP** for model interpretability, optimized for visual clarity.
+-  **Multi-Optimization**: Applied **8 unique metaheuristic algorithms** for model hyperparameter optimization.
+-  **Meta-Optimization**: Used **Genetic Algorithm (GA)** and **Memetic Search** to tune the parameters of the **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm**.
+-  **Explainable AI**: Integrated **SHAP** and **LIME** for model interpretability, optimized for visual clarity.
 
 ---
 
@@ -33,7 +33,7 @@ We optimized critical hyperparameters (Learning Rate, Epochs, Weight Decay, Warm
 
 ### Phase 3: Algorithm-in-the-Loop Optimization (Meta-Optimization)
 Following the project's mandatory "Step 3", we implemented a hierarchical optimization strategy:
-- **Outer Loop**: **Genetic Algorithm (GA)** and **Memetic algorithm** evolved the parameters ($a$, $b$, and $p$) of the Whale Optimization Algorithm and Firefly algorithm.
+- **Outer Loop**: **Genetic Algorithm (GA)** and **Memetic algorithm** evolved the parameters of the Whale Optimization Algorithm and Firefly algorithm.
 - **Inner Loop**: The **Whale Optimization Algorithm (WOA)** and **Firefly Algorithm** then used these optimized parameters to fine-tune the BERT model.
 
 ### Phase 4: Explainable AI (XAI)
