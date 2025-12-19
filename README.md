@@ -40,7 +40,6 @@ To make the "Black Box" of BERT transparent, we used **SHAP (SHapley Additive ex
 ---
 
 ## 📂 Project Structure
-The project is organized into a professional modular structure:
 
 ```text
 ├── config/             # Centralized constants and HPO bounds
